@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.linkedlist;
 
 public class Operations {
     Node head;
@@ -51,13 +51,9 @@ public class Operations {
             Node temp = head;
             head = head.next;
         }
-//        else
-//            System.out.println("Linked List is empty.");
     }
     public void removeLastNode(){
-//        if (head == null)
-//            System.out.println("Linked List is empty.");
-//        else {
+        if (head != null) {
             /*  Check if linked list contains one node
             *   if it contains 1 node remove it
             *   else traverse till last second node.
@@ -74,7 +70,23 @@ public class Operations {
                 head = tail = null;
             }
         }
-//    }
+    }
+    public int searchElement(int element){
+        if (head == null)
+            return -1;
+        else {
+            int index = 0;
+            Node temp = head;
+            while (temp != null){
+                if (temp.data == element)
+                    return index;
+                index++;
+                temp = temp.next;
+            }
+            /*  Element not found  */
+            return -1;
+        }
+    }
     public void print(){
         if (head == null)
             System.out.println("Linked list is empty.");

@@ -1,4 +1,4 @@
-package com.bridgelabz;
+package com.bridgelabz.linkedlist;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class LinkedListExample {
         do {
             System.out.println("\nSelect option. \n1. Add data at start. \n2. Add data at end. " +
                     "\n3. Add data in between of two nodes. \n4. Delete first node. " +
-                    "\n5. Delete last node. ");
+                    "\n5. Delete last node. \n6. Search an element. \n0. Exit");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
@@ -27,10 +27,13 @@ public class LinkedListExample {
                 case 5:
                     LinkedList.removeLastElement();
                     break;
+                case 6:
+                    LinkedList.searchElement(30);
+                    break;
                 default:
                     System.out.println("Invalid number!");
                     break;
             }
-        }while (choice <= 5);
+        }while (choice != 0);
     }
 }
