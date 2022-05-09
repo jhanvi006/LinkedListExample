@@ -6,7 +6,6 @@ public class Operations {
     public void push(int data)
     {
         Node temp = new Node(data);
-        temp.data = data;
         temp.next = top;
         top = temp;
     }
@@ -16,7 +15,7 @@ public class Operations {
             System.out.print("\nStack Underflow");
             return;
         }
-        top = (top).next;
+        top = top.next;
     }
     public int peek()
     {
@@ -31,10 +30,10 @@ public class Operations {
             System.out.printf("\nStack Underflow");
         }
         else {
-            System.out.print("Stack elements are ");
+            System.out.println("Stack elements are ");
             Node temp = top;
             while (temp != null) {
-                System.out.print(temp.data+" ");
+                System.out.println(temp.data);
                 temp = temp.next;
             }
         }
