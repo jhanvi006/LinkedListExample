@@ -1,13 +1,17 @@
 package com.bridgelabz.queue;
-import com.bridgelabz.linkedlist.Operations;
+
+import java.util.Scanner;
 
 public class Queue {
     static Operations op = new Operations();
+    static Scanner sc = new Scanner(System.in);
     public static void addDataToQueue(){
-        op.append(56);
-        op.append(30);
-        op.append(70);
-        System.out.print("Queue elements are ");
+        System.out.println("Enter a number to add in queue: ");
+        op.enqueue(sc.nextInt());
+        op.print();
+    }
+    public static void removeDataFromQueue(){
+        op.dequeue();
         op.print();
     }
 }
